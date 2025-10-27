@@ -1,0 +1,65 @@
+# Blackcoffer Data Extraction and NLP Assignment
+
+This project extracts article text from a list of URLs and performs textual analysis to compute sentiment and readability scores.
+
+## 1. Setup and Dependencies
+
+This project requires Python 3 and several libraries.
+
+### a) Create a Project Folder
+
+Create a folder for the project and organize it as follows:
+
+project_folder/
+├── MasterDictionary/
+│   ├── positive-words.txt
+│   └── negative-words.txt
+├── StopWords/
+│   ├── StopWords_Auditor.txt
+│   ├── StopWords_Currencies.txt
+│   ├── ... (and other stopword files)
+├── main.py                # The Python script
+├── input.xlsx             # The input file with URLs
+└── requirements.txt       # The file with dependencies
+
+
+### b) Install Dependencies
+
+Install the required Python libraries using pip. You can create a `requirements.txt` file with the content below and run the installation command.
+
+**`requirements.txt`:**
+pandas
+requests
+beautifulsoup4
+nltk
+textblob
+openpyxl
+
+
+**Installation Command:**
+```bash
+pip install -r requirements.txt
+2. How to Run the Script
+Once the folder structure is set up and dependencies are installed, you can run the script from your terminal.
+
+Navigate to the project folder in your terminal:
+
+Bash
+
+cd path/to/your/project_folder
+Run the Python script:
+
+Bash
+
+python main.py
+The script will then:
+
+Read URLs from input.xlsx.
+
+Scrape the title and article text for each URL.
+
+Save the extracted text into a new folder named output_text_files.
+
+Perform the required textual analysis on each article.
+
+Generate a final Excel file named Text_Analysis_Output.xlsx with all the computed variables.
